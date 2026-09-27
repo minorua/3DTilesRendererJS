@@ -1,10 +1,10 @@
 /** @import { Camera, WebGLRenderer, Box3, Sphere, Raycaster } from 'three' */
 /** @import { Ellipsoid } from '../math/Ellipsoid.js' */
 import { TilesRendererBase, LoaderUtils } from '3d-tiles-renderer/core';
-import { B3DMLoader } from '../loaders/B3DMLoader.js';
-import { PNTSLoader } from '../loaders/PNTSLoader.js';
-import { I3DMLoader } from '../loaders/I3DMLoader.js';
-import { CMPTLoader } from '../loaders/CMPTLoader.js';
+// import { B3DMLoader } from '../loaders/B3DMLoader.js';
+// import { PNTSLoader } from '../loaders/PNTSLoader.js';
+// import { I3DMLoader } from '../loaders/I3DMLoader.js';
+// import { CMPTLoader } from '../loaders/CMPTLoader.js';
 import { TilesGroup } from './TilesGroup.js';
 import {
 	Matrix4,
@@ -19,7 +19,7 @@ import { TileBoundingVolume } from '../math/TileBoundingVolume.js';
 import { ExtendedFrustum } from '../math/ExtendedFrustum.js';
 import { estimateBytesUsed } from '../utils/MemoryUtils.js';
 import { WGS84_ELLIPSOID } from '../math/GeoConstants.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
 // In three.js r165 and higher raycast traversal can be ended early
@@ -667,6 +667,7 @@ export class TilesRenderer extends TilesRendererBase {
 		const fileType = ( LoaderUtils.readMagicBytes( buffer ) || extension ).toLowerCase();
 		switch ( fileType ) {
 
+			/*
 			case 'b3dm': {
 
 				const loader = new B3DMLoader( manager );
@@ -764,7 +765,7 @@ export class TilesRenderer extends TilesRendererBase {
 				break;
 
 			}
-
+			*/
 			default: {
 
 				promise = this.invokeOnePlugin( plugin => plugin.parseToMesh && plugin.parseToMesh( buffer, tile, extension, url, abortSignal ) );
