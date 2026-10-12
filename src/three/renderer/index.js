@@ -5,6 +5,7 @@ export { TilesRenderer } from './tiles/TilesRenderer.js';
 // export { I3DMLoader } from './loaders/I3DMLoader.js';
 // export { CMPTLoader } from './loaders/CMPTLoader.js';
 
+export { LRUCache, DownloadPriorityQueue, PriorityQueue } from '3d-tiles-renderer/core';
 export * from './math/Ellipsoid.js';
 export * from './math/EllipsoidRegion.js';
 export * as GeoUtils from './math/GeoUtils.js';
